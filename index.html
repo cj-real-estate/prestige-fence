@@ -871,9 +871,10 @@
   // Year
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Bid form (front-end demo handler)
+  // Bid form
   document.getElementById('bid-request').addEventListener('submit', function(e){
     e.preventDefault();
+    var form = this;
     var required = ['bf-company','bf-name','bf-email','bf-phone'];
     var ok = true;
     required.forEach(function(id){
@@ -882,8 +883,38 @@
       else { el.style.borderColor = ''; }
     });
     if (!ok) return;
-    this.style.display = 'none';
-    document.getElementById('bf-success').classList.add('show');
+
+    var btn = form.querySelector('.bf-submit');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    var payload = {
+      company:     document.getElementById('bf-company').value.trim(),
+      name:        document.getElementById('bf-name').value.trim(),
+      email:       document.getElementById('bf-email').value.trim(),
+      phone:       document.getElementById('bf-phone').value.trim(),
+      projectName: document.getElementById('bf-project').value.trim(),
+      location:    document.getElementById('bf-location').value.trim(),
+      projectType: document.getElementById('bf-type').value.trim(),
+      bidDate:     document.getElementById('bf-biddate').value.trim(),
+      notes:       document.getElementById('bf-notes').value.trim(),
+    };
+
+    fetch('/api/bid', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    })
+    .then(function(r){ return r.ok ? r : Promise.reject(r.status); })
+    .then(function(){
+      form.style.display = 'none';
+      document.getElementById('bf-success').classList.add('show');
+    })
+    .catch(function(){
+      btn.disabled = false;
+      btn.innerHTML = '<svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:currentColor"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg> Submit Bid Request';
+      alert('Something went wrong — please email estimating@prestigefenceusa.com directly.');
+    });
   });
 </script>
 </body>
