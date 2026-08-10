@@ -3,410 +3,440 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Prestige Fence | Commercial &amp; Government Perimeter Security Contractors</title>
-<meta name="description" content="Prestige Fence is a self-performing commercial and government fencing subcontractor specializing in perimeter security, anti-ram barriers, automated access control, and high-security enclosures for federal, military, utility, and infrastructure projects." />
+<title>Prestige Fence | Custom Fences &amp; Gates — Oklahoma City Metro</title>
+<meta name="description" content="Prestige Fence builds premium cedar, vinyl, ornamental steel, chain link, and ranch fencing across the Oklahoma City metro — with custom gates, automation, staining, and a 2-year workmanship warranty included on every job." />
 <link rel="icon" type="image/svg+xml" href="images/prestige-fence-logo.svg" />
 <link rel="apple-touch-icon" href="images/prestige-fence-logo.svg" />
-
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <style>
   :root {
-    --bg: #0a0b0d;
-    --bg-2: #0f1115;
-    --panel: #14161b;
-    --panel-2: #181b21;
-    --line: #262a31;
-    --line-soft: #20242b;
-    --gold: #f5b800;
-    --gold-2: #d99e0b;
-    --gold-deep: #b8860b;
-    --gold-soft: rgba(245,184,0,0.12);
-    --steel: #6b7886;
-    --text: #f4f6f8;
-    --muted: #9aa3ad;
-    --muted-2: #767e88;
-    --white: #ffffff;
+    --pine: #143D33;
+    --pine-2: #0F312A;
+    --pine-3: #0A241E;
+    --gold: #C6A15B;
+    --gold-2: #D8B878;
+    --gold-soft: rgba(198,161,91,0.12);
+    --gold-line: rgba(198,161,91,0.45);
+    --cream: #FAF7F1;
+    --card: #FFFFFF;
+    --sage: #E9EDE4;
+    --ink: #22292A;
+    --muted: #5F6B64;
+    --cream-muted: rgba(250,247,241,0.72);
+    --price: #17694A;
+    --line: #E7E2D6;
+    --serif: "Lora", Georgia, serif;
+    --sans: "Poppins", -apple-system, sans-serif;
     --maxw: 1240px;
-    --r: 14px;
   }
-
-  * { box-sizing: border-box; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
-  html, body { margin: 0; padding: 0; }
   body {
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    color: var(--text);
-    background: var(--bg);
-    line-height: 1.6;
+    font-family: var(--sans);
+    background: var(--cream);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.65;
     -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
   }
-  ::selection { background: var(--gold); color: #111; }
-  a { color: inherit; }
+  ::selection { background: var(--gold); color: var(--pine-3); }
   img { max-width: 100%; display: block; }
-
   .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+  h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; line-height: 1.15; }
 
-  /* Chain-link texture overlay used in several sections */
-  .mesh-bg {
-    background-image:
-      linear-gradient(135deg, transparent 47%, rgba(245,184,0,0.05) 49%, rgba(245,184,0,0.05) 51%, transparent 53%),
-      linear-gradient(45deg, transparent 47%, rgba(245,184,0,0.05) 49%, rgba(245,184,0,0.05) 51%, transparent 53%);
-    background-size: 26px 26px;
-  }
+  /* ============ Reveal animation ============ */
+  .rv { opacity: 0; transform: translateY(26px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .rv.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .rv { opacity: 1; transform: none; transition: none; } }
 
+  /* ============ Shared section pieces ============ */
   .eyebrow {
-    display: inline-flex; align-items: center; gap: 10px;
-    color: var(--gold);
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-size: 12.5px;
-    margin: 0 0 18px;
+    font-family: var(--sans); color: var(--gold); font-weight: 700;
+    font-size: 12px; letter-spacing: 3px; text-transform: uppercase;
+    display: block; margin-bottom: 16px;
   }
-  .eyebrow::before {
-    content: ""; width: 28px; height: 2px; background: var(--gold); display: inline-block;
-  }
-  .eyebrow.center { justify-content: center; }
-
-  h1, h2, h3, h4 { font-weight: 800; letter-spacing: -0.02em; line-height: 1.08; margin: 0; }
-  .accent { color: var(--gold); }
+  .rule { width: 56px; height: 3px; background: var(--gold); border: none; margin: 26px 0 0; }
+  .rule.center { margin-left: auto; margin-right: auto; }
+  .sec { padding: 110px 0; }
+  .sec-head { max-width: 720px; margin-bottom: 64px; }
+  .sec-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+  .sec-head h2 { font-size: clamp(34px, 4.6vw, 54px); }
+  .sec-head p { color: var(--muted); margin-top: 20px; font-size: 17px; }
+  .sec-head .rule { margin-top: 22px; }
+  .sec-head.center .rule { margin-left: auto; margin-right: auto; }
 
   /* ============ Top bar ============ */
-  .topbar {
-    background: #060708;
-    border-bottom: 1px solid var(--line-soft);
-    font-size: 13px;
-    color: var(--muted);
-  }
-  .topbar .wrap { display: flex; align-items: center; justify-content: space-between; height: 42px; gap: 20px; }
-  .topbar .tb-left { display: flex; gap: 26px; }
-  .topbar .tb-left span { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
+  .topbar { background: var(--pine-3); padding: 10px 0; font-size: 13.5px; }
+  .topbar .wrap { display: flex; justify-content: space-between; align-items: center; gap: 18px; }
+  .topbar a { color: var(--cream-muted); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+  .topbar a:hover { color: var(--gold-2); }
   .topbar svg { width: 14px; height: 14px; fill: var(--gold); flex-shrink: 0; }
-  .topbar a { color: var(--muted); text-decoration: none; }
-  .topbar a:hover { color: var(--gold); }
-  .tb-right { display: flex; gap: 22px; }
-  @media (max-width: 880px) { .topbar { display: none; } }
+  .tb-left { display: flex; gap: 26px; align-items: center; }
+  .tb-right { color: var(--cream-muted); display: flex; gap: 10px; align-items: center; }
+  .tb-right .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--gold); }
+  @media (max-width: 780px) { .tb-right { display: none; } .tb-left { justify-content: space-between; width: 100%; } }
 
   /* ============ Header ============ */
-  header.site-header {
-    position: sticky; top: 0; z-index: 200;
-    background: rgba(10,11,13,0.86);
-    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--line);
+  header.site {
+    position: sticky; top: 0; z-index: 300;
+    background: var(--pine);
+    border-bottom: 1px solid rgba(198,161,91,0.25);
+    transition: box-shadow 0.25s;
   }
-  .nav { display: flex; align-items: center; justify-content: space-between; min-height: 100px; gap: 24px; padding: 8px 0; }
-  .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; flex-shrink: 0; }
-  .brand-logo { height: 110px; width: auto; display: block; }
-  .foot-brand .brand-logo { height: 150px; margin-bottom: 10px; }
-  .main-nav { display: flex; align-items: center; gap: 30px; margin-left: auto; }
-  .main-nav a {
-    color: var(--text); text-decoration: none; font-weight: 600; font-size: 15px;
-    letter-spacing: 0.2px; transition: color 0.15s; white-space: nowrap;
+  header.site.scrolled { box-shadow: 0 12px 40px rgba(10,36,30,0.35); }
+  .nav { display: flex; align-items: center; justify-content: space-between; min-height: 92px; gap: 28px; padding: 10px 0; }
+  .brand { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
+  .brand img { height: 84px; width: auto; }
+  .mainnav { display: flex; align-items: center; gap: 34px; }
+  .mainnav a {
+    color: var(--cream); text-decoration: none; font-weight: 500; font-size: 14.5px;
+    letter-spacing: 0.4px; transition: color 0.15s; white-space: nowrap;
   }
-  .main-nav a:hover { color: var(--gold); }
+  .mainnav a:hover { color: var(--gold-2); }
   .nav-cta {
-    background: var(--gold); color: #111; text-decoration: none;
-    padding: 13px 24px; border-radius: 9px; font-weight: 800; font-size: 14.5px;
-    white-space: nowrap; transition: transform 0.12s, box-shadow 0.15s;
-    box-shadow: 0 6px 20px rgba(245,184,0,0.22);
+    background: var(--gold); color: var(--pine-3); text-decoration: none;
+    padding: 14px 28px; border-radius: 8px; font-weight: 700; font-size: 14px;
+    letter-spacing: 0.4px; white-space: nowrap;
+    transition: background 0.15s, transform 0.12s, box-shadow 0.2s;
   }
-  .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 10px 28px rgba(245,184,0,0.34); }
-  .menu-btn { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 8px; }
-  .menu-btn span { width: 28px; height: 3px; background: var(--gold); border-radius: 2px; display: block; }
-  @media (max-width: 1040px) { .main-nav, .nav-cta { display: none; } .menu-btn { display: flex; } }
+  .nav-cta:hover { background: var(--gold-2); transform: translateY(-1px); box-shadow: 0 12px 30px rgba(198,161,91,0.35); }
+  .burger { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+  .burger span { display: block; width: 26px; height: 3px; background: var(--gold); margin: 5px 0; border-radius: 2px; }
+  @media (max-width: 1080px) {
+    .mainnav, .nav-cta { display: none; }
+    .burger { display: block; }
+    .brand img { height: 68px; }
+    .nav { min-height: 76px; }
+  }
 
   /* Mobile menu */
-  .mobile-menu {
-    position: fixed; inset: 0; z-index: 300; background: rgba(8,9,11,0.98);
-    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+  .mmenu {
+    position: fixed; inset: 0; z-index: 400; background: var(--pine-3);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
     opacity: 0; pointer-events: none; transition: opacity 0.25s;
   }
-  .mobile-menu.open { opacity: 1; pointer-events: auto; }
-  .mobile-menu a { color: var(--text); text-decoration: none; font-size: 22px; font-weight: 700; padding: 12px; }
-  .mobile-menu a:active { color: var(--gold); }
-  .mobile-menu .mm-cta { margin-top: 20px; background: var(--gold); color: #111; padding: 14px 34px; border-radius: 10px; font-weight: 800; }
-  .menu-close { position: absolute; top: 22px; right: 26px; background: none; border: none; color: var(--gold); font-size: 42px; cursor: pointer; line-height: 1; }
-
-  /* ============ Hero ============ */
-  .hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
-  .hero-bg {
-    position: absolute; inset: 0; z-index: 0;
-    background:
-      radial-gradient(1100px 540px at 78% -10%, rgba(245,184,0,0.16), transparent 60%),
-      radial-gradient(900px 600px at 0% 110%, rgba(107,120,134,0.16), transparent 55%),
-      linear-gradient(180deg, #0c0d10, #0a0b0d 60%);
+  .mmenu.open { opacity: 1; pointer-events: auto; }
+  .mmenu a {
+    color: var(--cream); text-decoration: none; font-family: var(--serif);
+    font-size: 30px; padding: 10px; transition: color 0.15s;
   }
-  .hero-bg::after {
-    content: ""; position: absolute; inset: 0; opacity: 0.5;
-    background-image:
-      linear-gradient(135deg, transparent 47%, rgba(245,184,0,0.06) 49%, rgba(245,184,0,0.06) 51%, transparent 53%),
-      linear-gradient(45deg, transparent 47%, rgba(245,184,0,0.06) 49%, rgba(245,184,0,0.06) 51%, transparent 53%);
-    background-size: 30px 30px;
-    -webkit-mask-image: linear-gradient(105deg, transparent 38%, #000 100%);
-    mask-image: linear-gradient(105deg, transparent 38%, #000 100%);
+  .mmenu a:hover { color: var(--gold-2); }
+  .mmenu .mm-cta {
+    font-family: var(--sans); font-size: 16px; font-weight: 700; color: var(--pine-3);
+    background: var(--gold); border-radius: 8px; padding: 16px 38px; margin-top: 22px;
   }
-  .hero .wrap { position: relative; z-index: 1; padding-top: 86px; padding-bottom: 86px; }
-  .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 56px; align-items: center; }
-  .hero-badge {
-    display: inline-flex; align-items: center; gap: 10px;
-    background: var(--gold-soft); border: 1px solid rgba(245,184,0,0.3);
-    color: var(--gold); font-weight: 700; font-size: 13px; letter-spacing: 1px;
-    padding: 8px 16px; border-radius: 100px; text-transform: uppercase; margin-bottom: 26px;
-  }
-  .hero-badge svg { width: 15px; height: 15px; fill: var(--gold); }
-  .hero h1 { font-size: clamp(38px, 5.6vw, 70px); }
-  .hero h1 span.line { display: block; }
-  .hero-sub { font-size: clamp(17px, 2vw, 21px); color: var(--muted); max-width: 580px; margin: 26px 0 0; }
-  .hero-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 38px; }
-  .btn {
-    display: inline-flex; align-items: center; gap: 10px;
-    padding: 17px 32px; border-radius: 10px; font-weight: 800; font-size: 16px;
-    text-decoration: none; border: none; cursor: pointer; font-family: inherit;
-    transition: transform 0.12s, box-shadow 0.15s, background 0.15s, border-color 0.15s;
-  }
-  .btn svg { width: 18px; height: 18px; }
-  .btn-gold { background: var(--gold); color: #111; box-shadow: 0 8px 26px rgba(245,184,0,0.26); }
-  .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(245,184,0,0.38); }
-  .btn-gold svg { fill: #111; }
-  .btn-ghost { background: rgba(255,255,255,0.04); color: var(--text); border: 1px solid var(--line); }
-  .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
-  .btn-ghost svg { fill: currentColor; }
-
-  .hero-meta { display: flex; gap: 26px; margin-top: 40px; flex-wrap: wrap; }
-  .hero-meta .hm { display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 14.5px; font-weight: 600; }
-  .hero-meta svg { width: 20px; height: 20px; fill: var(--gold); }
-
-  /* Hero right visual */
-  .hero-visual { display: flex; align-items: center; }
-  .hero-img-wrap {
-    position: relative; width: 100%; border-radius: 16px; overflow: hidden;
-    aspect-ratio: 4/3;
-    box-shadow: 0 32px 80px rgba(0,0,0,0.55), 0 0 0 1px rgba(245,184,0,0.12);
-  }
-  .hero-img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(0.8); }
-  .hero-img-overlay {
-    position: absolute; inset: 0;
-    background: linear-gradient(160deg, transparent 40%, rgba(10,11,13,0.75) 100%),
-                linear-gradient(to top, rgba(10,11,13,0.6) 0%, transparent 45%);
-  }
-  .hero-img-badge {
-    position: absolute; bottom: 20px; left: 20px;
-    display: flex; align-items: center; gap: 10px;
-    background: rgba(10,11,13,0.78); backdrop-filter: blur(10px);
-    border: 1px solid rgba(245,184,0,0.25); border-radius: 100px;
-    padding: 9px 16px; color: #fff; font-size: 13px; font-weight: 700; letter-spacing: 0.3px;
-  }
-  .hib-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 8px var(--gold); flex-shrink: 0; }
-
-  /* Hero side stat card */
-  .hero-card {
-    background: linear-gradient(180deg, var(--panel), var(--bg-2));
-    border: 1px solid var(--line); border-radius: 18px; padding: 30px;
-    box-shadow: 0 30px 70px rgba(0,0,0,0.5);
-  }
-  .hero-card .hc-head { display: flex; align-items: center; gap: 12px; padding-bottom: 20px; border-bottom: 1px solid var(--line); margin-bottom: 22px; }
-  .hero-card .hc-head .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 12px var(--gold); }
-  .hero-card .hc-head h3 { font-size: 15px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); font-weight: 700; }
-  .hc-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 20px; }
-  .hc-stat .v { font-size: 34px; font-weight: 900; color: var(--white); letter-spacing: -0.03em; }
-  .hc-stat .v .accent { color: var(--gold); }
-  .hc-stat .l { font-size: 13px; color: var(--muted); margin-top: 4px; line-height: 1.4; }
-
-  @media (max-width: 920px) {
-    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-    .hero-card { order: 2; }
-    .hero-visual { display: none; }
+  .mmenu .close {
+    position: absolute; top: 26px; right: 26px; background: none; border: none;
+    color: var(--gold); font-size: 38px; cursor: pointer; line-height: 1;
   }
 
-  /* ============ Logo / credential strip ============ */
-  .cred-strip { background: #060708; border-bottom: 1px solid var(--line); }
-  .cred-strip .wrap { display: flex; align-items: center; gap: 18px 40px; flex-wrap: wrap; justify-content: center; padding: 26px 28px; }
-  .cred-strip .label { color: var(--muted-2); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; margin-right: 8px; }
-  .cred {
-    display: inline-flex; align-items: center; gap: 9px; color: var(--text);
-    font-weight: 700; font-size: 14px; letter-spacing: 0.3px; opacity: 0.92;
-  }
-  .cred svg { width: 22px; height: 22px; fill: var(--gold); flex-shrink: 0; }
-
-  /* ============ Section base ============ */
-  section.block { padding: 96px 0; position: relative; }
-  section.block.alt { background: var(--bg-2); border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
-  .section-head { max-width: 760px; margin: 0 auto 56px; text-align: center; }
-  .section-head.left { margin-left: 0; text-align: left; }
-  .section-title { font-size: clamp(30px, 4vw, 46px); }
-  .section-desc { color: var(--muted); font-size: 18px; margin-top: 18px; }
-
-  /* ============ Capabilities ============ */
-  .cap-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-  .cap {
-    background: var(--panel); border: 1px solid var(--line); border-radius: var(--r);
-    padding: 30px 28px; transition: transform 0.18s, border-color 0.18s, background 0.18s;
-    position: relative; overflow: hidden;
-  }
-  .cap::before { content: ""; position: absolute; left: 0; top: 0; height: 3px; width: 0; background: var(--gold); transition: width 0.3s; }
-  .cap:hover { transform: translateY(-4px); border-color: rgba(245,184,0,0.45); background: var(--panel-2); }
-  .cap:hover::before { width: 100%; }
-  .cap-ico {
-    width: 56px; height: 56px; border-radius: 12px; display: flex; align-items: center; justify-content: center;
-    background: var(--gold-soft); border: 1px solid rgba(245,184,0,0.25); margin-bottom: 20px;
-  }
-  .cap-ico svg { width: 30px; height: 30px; fill: var(--gold); }
-  .cap h3 { font-size: 20px; margin-bottom: 10px; }
-  .cap p { color: var(--muted); font-size: 15px; margin: 0; }
-  @media (max-width: 920px) { .cap-grid { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 620px) { .cap-grid { grid-template-columns: 1fr; } }
-
-  /* ============ Markets ============ */
-  .markets { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
-  .market {
-    position: relative; border-radius: var(--r); overflow: hidden; min-height: 230px;
-    border: 1px solid var(--line); display: flex; align-items: flex-end;
-    background-size: cover; background-position: center;
-  }
-  .market::after {
+  /* ============ Hero (catalog cover style) ============ */
+  .hero { background: var(--pine); position: relative; overflow: hidden; }
+  .hero::before {
     content: ""; position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(10,11,13,0.2) 0%, rgba(10,11,13,0.55) 55%, rgba(10,11,13,0.95) 100%);
+    background:
+      radial-gradient(1000px 620px at 85% 0%, rgba(198,161,91,0.10), transparent 55%),
+      radial-gradient(800px 520px at 0% 100%, rgba(10,36,30,0.65), transparent 60%);
   }
-  .market .m-body { position: relative; z-index: 1; padding: 22px; width: 100%; }
-  .market .m-ico { width: 36px; height: 36px; margin-bottom: 12px; }
-  .market .m-ico svg { width: 36px; height: 36px; fill: var(--gold); }
-  .market h3 { font-size: 18px; }
-  .market p { color: var(--muted); font-size: 13px; margin: 6px 0 0; }
-  .market:hover { border-color: rgba(245,184,0,0.5); }
-  @media (max-width: 1040px) { .markets { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 520px) { .markets { grid-template-columns: 1fr; } }
+  .hero-frame {
+    position: absolute; inset: 22px; border: 1px solid var(--gold-line);
+    pointer-events: none;
+  }
+  .hero .wrap { position: relative; z-index: 1; padding-top: 120px; padding-bottom: 90px; }
+  .hero h1 {
+    color: var(--cream); font-size: clamp(46px, 7vw, 92px); font-weight: 600;
+    max-width: 15ch; letter-spacing: -0.5px;
+  }
+  .hero h1 em { font-style: italic; color: var(--gold-2); }
+  .hero-sub {
+    color: var(--cream-muted); font-size: clamp(16px, 1.9vw, 19px);
+    max-width: 560px; margin-top: 30px;
+  }
+  .hero-ctas { display: flex; gap: 16px; margin-top: 44px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px; text-decoration: none;
+    font-family: var(--sans); font-weight: 700; font-size: 15px; letter-spacing: 0.3px;
+    padding: 17px 34px; border-radius: 8px; cursor: pointer; border: none;
+    transition: transform 0.12s, box-shadow 0.2s, background 0.15s, border-color 0.15s, color 0.15s;
+  }
+  .btn-gold { background: var(--gold); color: var(--pine-3); }
+  .btn-gold:hover { background: var(--gold-2); transform: translateY(-2px); box-shadow: 0 16px 40px rgba(198,161,91,0.35); }
+  .btn-ghost { background: transparent; color: var(--cream); border: 1px solid var(--gold-line); }
+  .btn-ghost:hover { border-color: var(--gold); color: var(--gold-2); }
+  .hero-stats {
+    display: flex; gap: 64px; margin-top: 84px; padding-top: 40px;
+    border-top: 1px solid rgba(198,161,91,0.28); flex-wrap: wrap;
+  }
+  .hstat .n { font-family: var(--serif); color: var(--gold); font-size: 44px; font-weight: 600; line-height: 1; }
+  .hstat .l { color: var(--cream-muted); font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 600; margin-top: 10px; }
+  @media (max-width: 700px) {
+    .hero .wrap { padding-top: 80px; padding-bottom: 70px; }
+    .hero-frame { inset: 12px; }
+    .hero-stats { gap: 36px; margin-top: 60px; }
+    .hstat .n { font-size: 34px; }
+  }
 
-  /* ============ Stats band ============ */
-  .stats-band { background: linear-gradient(120deg, #0e0f12, #121419); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); position: relative; overflow: hidden; }
-  .stats-band .wrap { padding: 64px 28px; position: relative; z-index: 1; }
-  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
-  .stat { text-align: center; }
-  .stat .num { font-size: clamp(38px, 5vw, 56px); font-weight: 900; color: var(--gold); letter-spacing: -0.03em; line-height: 1; }
-  .stat .lab { color: var(--muted); font-size: 15px; margin-top: 12px; font-weight: 600; }
-  @media (max-width: 760px) { .stats-grid { grid-template-columns: 1fr 1fr; gap: 36px 20px; } }
+  /* ============ Photo band ============ */
+  .band { position: relative; height: min(520px, 58vw); overflow: hidden; }
+  .band img { width: 100%; height: 100%; object-fit: cover; }
+  .band::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(10,36,30,0.55), transparent 55%);
+  }
+  .band-cap {
+    position: absolute; z-index: 2; left: 50%; transform: translateX(-50%);
+    bottom: 34px; width: calc(100% - 56px); max-width: var(--maxw);
+    display: flex; justify-content: flex-start;
+  }
+  .band-cap span {
+    color: var(--cream); font-family: var(--serif); font-style: italic;
+    font-size: clamp(16px, 2.2vw, 21px); border-left: 3px solid var(--gold); padding-left: 18px;
+  }
 
-  /* ============ Projects ============ */
-  .proj-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  .proj {
-    background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden;
-    transition: transform 0.18s, border-color 0.18s;
+  /* ============ Cred strip ============ */
+  .creds { background: var(--cream); border-bottom: 1px solid var(--line); }
+  .creds .wrap {
+    display: flex; justify-content: center; gap: clamp(24px, 5vw, 72px);
+    padding-top: 34px; padding-bottom: 34px; flex-wrap: wrap;
   }
-  .proj:hover { transform: translateY(-4px); border-color: rgba(245,184,0,0.4); }
-  .proj-img { height: 200px; background-size: cover; background-position: center; position: relative; }
-  .proj-img .tag {
-    position: absolute; top: 14px; left: 14px; background: rgba(10,11,13,0.82); border: 1px solid rgba(245,184,0,0.4);
-    color: var(--gold); font-size: 11.5px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
-    padding: 6px 12px; border-radius: 6px; backdrop-filter: blur(4px);
-  }
-  .proj-body { padding: 24px 24px 26px; }
-  .proj-body h3 { font-size: 20px; margin-bottom: 6px; }
-  .proj-loc { color: var(--gold); font-size: 13px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 14px; }
-  .proj-body p { color: var(--muted); font-size: 14.5px; margin: 0 0 18px; }
-  .proj-meta { display: flex; gap: 24px; border-top: 1px solid var(--line); padding-top: 16px; }
-  .proj-meta .pm .pmv { color: var(--white); font-weight: 800; font-size: 17px; }
-  .proj-meta .pm .pml { color: var(--muted-2); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
-  @media (max-width: 980px) { .proj-grid { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 640px) { .proj-grid { grid-template-columns: 1fr; } }
+  .cred { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 14px; color: var(--ink); }
+  .cred svg { width: 20px; height: 20px; fill: var(--gold); flex-shrink: 0; }
 
-  /* ============ Why / Differentiators ============ */
-  .why-wrap { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 56px; align-items: center; }
-  .why-list { display: flex; flex-direction: column; gap: 8px; }
-  .why-item { display: flex; gap: 20px; padding: 22px; border-radius: var(--r); border: 1px solid transparent; transition: background 0.18s, border-color 0.18s; }
-  .why-item:hover { background: var(--panel); border-color: var(--line); }
-  .why-num { color: var(--gold); font-weight: 900; font-size: 18px; font-family: "Inter", sans-serif; flex-shrink: 0; width: 44px; height: 44px; border-radius: 10px; border: 1px solid rgba(245,184,0,0.3); display: flex; align-items: center; justify-content: center; background: var(--gold-soft); }
-  .why-item h3 { font-size: 19px; margin-bottom: 6px; }
-  .why-item p { color: var(--muted); font-size: 15px; margin: 0; }
-  .why-side {
-    background: linear-gradient(180deg, var(--panel), var(--bg-2)); border: 1px solid var(--line);
-    border-radius: 18px; padding: 38px; position: relative; overflow: hidden;
+  /* ============ Fence styles grid ============ */
+  .styles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+  .scard {
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+    overflow: hidden; box-shadow: 0 10px 30px rgba(20,40,30,0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex; flex-direction: column;
   }
-  .why-side .quote-mark { font-size: 90px; color: var(--gold); line-height: 0.6; font-family: Georgia, serif; opacity: 0.5; }
-  .why-side blockquote { font-size: 21px; font-weight: 600; line-height: 1.5; margin: 14px 0 26px; }
-  .why-side .qa { display: flex; align-items: center; gap: 14px; }
-  .why-side .qa .av { width: 50px; height: 50px; border-radius: 50%; background: var(--gold); color: #111; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 19px; }
-  .why-side .qa .qn { font-weight: 800; font-size: 15px; }
-  .why-side .qa .qt { color: var(--muted); font-size: 13.5px; }
-  @media (max-width: 920px) { .why-wrap { grid-template-columns: 1fr; gap: 38px; } }
+  .scard:hover { transform: translateY(-5px); box-shadow: 0 24px 50px rgba(20,40,30,0.12); }
+  .scard .ph { aspect-ratio: 2.3 / 1; overflow: hidden; }
+  .scard .ph img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+  .scard:hover .ph img { transform: scale(1.04); }
+  .scard .body { padding: 26px 26px 30px; flex: 1; display: flex; flex-direction: column; }
+  .scard .tag {
+    color: var(--gold); font-size: 11px; font-weight: 700; letter-spacing: 2.2px;
+    text-transform: uppercase; margin-bottom: 10px;
+  }
+  .scard h3 { font-size: 21.5px; margin-bottom: 10px; }
+  .scard p { color: var(--muted); font-size: 14.5px; flex: 1; }
+  @media (max-width: 1000px) { .styles-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 620px) { .styles-grid { grid-template-columns: 1fr; } }
+
+  /* ============ Gates feature ============ */
+  .sec-sage { background: var(--sage); }
+  .gates-feature {
+    display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center;
+    margin-bottom: 70px;
+  }
+  .gf-photo { border-radius: 14px; overflow: hidden; box-shadow: 0 30px 70px rgba(20,40,30,0.18); position: relative; }
+  .gf-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .gf-copy h3 { font-size: clamp(26px, 3vw, 36px); margin-bottom: 18px; }
+  .gf-copy p { color: var(--muted); margin-bottom: 16px; }
+  .gf-list { list-style: none; margin-top: 26px; }
+  .gf-list li { display: flex; gap: 12px; align-items: flex-start; padding: 9px 0; font-weight: 500; font-size: 15px; }
+  .gf-list svg { width: 19px; height: 19px; fill: var(--gold); flex-shrink: 0; margin-top: 3px; }
+  @media (max-width: 900px) { .gates-feature { grid-template-columns: 1fr; gap: 36px; } }
+  .gates-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; }
+  @media (max-width: 1000px) { .gates-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .gates-grid { grid-template-columns: 1fr; } }
+
+  /* ============ Finishing (dark) ============ */
+  .sec-dark { background: var(--pine); position: relative; overflow: hidden; }
+  .sec-dark::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(900px 500px at 90% 10%, rgba(198,161,91,0.08), transparent 60%);
+  }
+  .sec-dark .wrap { position: relative; z-index: 1; }
+  .sec-dark .sec-head h2 { color: var(--cream); }
+  .sec-dark .sec-head p { color: var(--cream-muted); }
+  .fin-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; }
+  .fcard {
+    background: rgba(255,255,255,0.03); border: 1px solid rgba(198,161,91,0.3);
+    border-radius: 14px; overflow: hidden; transition: border-color 0.2s, transform 0.2s, background 0.2s;
+    display: flex; flex-direction: column;
+  }
+  .fcard:hover { border-color: var(--gold); transform: translateY(-4px); background: rgba(255,255,255,0.05); }
+  .fcard .ph { aspect-ratio: 2.3 / 1; overflow: hidden; }
+  .fcard .ph img { width: 100%; height: 100%; object-fit: cover; }
+  .fcard .body { padding: 22px 24px 26px; flex: 1; }
+  .fcard h3 { color: var(--cream); font-size: 19px; margin-bottom: 8px; }
+  .fcard p { color: var(--cream-muted); font-size: 14px; }
+  @media (max-width: 1000px) { .fin-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .fin-grid { grid-template-columns: 1fr; } }
+
+  /* ============ Craftsmanship ============ */
+  .craft { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 70px; align-items: center; }
+  .craft-photo { border-radius: 14px; overflow: hidden; box-shadow: 0 30px 70px rgba(20,40,30,0.16); }
+  .craft-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .craft h2 { font-size: clamp(32px, 4vw, 46px); }
+  .craft > div > p { color: var(--muted); margin-top: 20px; }
+  .craft-list { list-style: none; margin-top: 34px; display: grid; gap: 0; }
+  .craft-list li {
+    display: flex; gap: 18px; align-items: flex-start;
+    padding: 18px 0; border-top: 1px solid var(--line);
+  }
+  .craft-list li:last-child { border-bottom: 1px solid var(--line); }
+  .craft-list .num {
+    font-family: var(--serif); color: var(--gold); font-weight: 600; font-size: 17px;
+    min-width: 34px; padding-top: 1px;
+  }
+  .craft-list h4 { font-size: 17.5px; margin-bottom: 4px; }
+  .craft-list p { color: var(--muted); font-size: 14.5px; }
+  @media (max-width: 940px) { .craft { grid-template-columns: 1fr; gap: 40px; } }
 
   /* ============ Process ============ */
-  .process { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; counter-reset: step; }
-  .pstep { position: relative; padding: 30px 26px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); }
-  .pstep .pn { font-size: 44px; font-weight: 900; color: rgba(245,184,0,0.22); line-height: 1; letter-spacing: -0.04em; }
-  .pstep h3 { font-size: 19px; margin: 12px 0 8px; }
-  .pstep p { color: var(--muted); font-size: 14.5px; margin: 0; }
-  @media (max-width: 920px) { .process { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 520px) { .process { grid-template-columns: 1fr; } }
+  .proc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+  .pcard { border-top: 3px solid var(--gold); padding-top: 26px; }
+  .pcard .pn { font-family: var(--serif); font-size: 46px; color: var(--gold); font-weight: 600; line-height: 1; }
+  .pcard h3 { font-size: 20px; margin: 18px 0 10px; }
+  .pcard p { color: var(--muted); font-size: 14.5px; }
+  @media (max-width: 1000px) { .proc-grid { grid-template-columns: 1fr 1fr; gap: 40px 30px; } }
+  @media (max-width: 560px) { .proc-grid { grid-template-columns: 1fr; } }
 
-  /* ============ Safety / compliance ============ */
-  .safety-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
-  .safety-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-  .safety-stat { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); padding: 26px; }
-  .safety-stat .ss-v { font-size: 40px; font-weight: 900; color: var(--gold); letter-spacing: -0.03em; }
-  .safety-stat .ss-l { color: var(--muted); font-size: 14px; margin-top: 6px; font-weight: 600; }
-  .compliance-list { list-style: none; padding: 0; margin: 22px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 22px; }
-  .compliance-list li { display: flex; align-items: center; gap: 11px; font-size: 15px; font-weight: 600; }
-  .compliance-list svg { width: 20px; height: 20px; fill: var(--gold); flex-shrink: 0; }
-  @media (max-width: 860px) { .safety-wrap { grid-template-columns: 1fr; gap: 34px; } .compliance-list { grid-template-columns: 1fr; } }
-
-  /* ============ CTA + Bid form ============ */
-  .bid { position: relative; overflow: hidden; }
-  .bid-bg { position: absolute; inset: 0; background: radial-gradient(900px 500px at 80% 0%, rgba(245,184,0,0.14), transparent 60%), linear-gradient(180deg, #0d0e11, #0a0b0d); }
-  .bid .wrap { position: relative; z-index: 1; }
-  .bid-grid { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 54px; align-items: start; }
-  .bid-info h2 { font-size: clamp(30px, 4vw, 44px); }
-  .bid-info p { color: var(--muted); font-size: 18px; margin: 20px 0 30px; }
-  .bid-points { list-style: none; padding: 0; margin: 0 0 34px; display: flex; flex-direction: column; gap: 16px; }
-  .bid-points li { display: flex; gap: 14px; align-items: flex-start; font-size: 16px; }
-  .bid-points .bp-ico { width: 28px; height: 28px; border-radius: 7px; background: var(--gold-soft); border: 1px solid rgba(245,184,0,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-  .bid-points .bp-ico svg { width: 16px; height: 16px; fill: var(--gold); }
-  .bid-points strong { display: block; font-weight: 700; }
-  .bid-points span { color: var(--muted); font-size: 14px; }
-  .bid-contact { display: flex; flex-direction: column; gap: 14px; }
-  .bid-contact a { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); font-weight: 700; font-size: 18px; }
-  .bid-contact a svg { width: 20px; height: 20px; fill: var(--gold); }
-
-  .bid-form {
-    background: linear-gradient(180deg, var(--panel), var(--bg-2)); border: 1px solid var(--line);
-    border-radius: 18px; padding: 36px; box-shadow: 0 30px 70px rgba(0,0,0,0.5);
+  /* ============ Warranty panel ============ */
+  .warranty { background: var(--pine); position: relative; padding: 96px 0; overflow: hidden; }
+  .warranty::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(800px 500px at 15% 100%, rgba(198,161,91,0.09), transparent 55%);
   }
-  .bid-form h3 { font-size: 23px; margin-bottom: 6px; }
-  .bid-form .bf-sub { color: var(--muted); font-size: 14.5px; margin-bottom: 24px; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+  .wr-frame { position: absolute; inset: 20px; border: 1px solid var(--gold-line); pointer-events: none; }
+  .warranty .wrap { position: relative; z-index: 1; text-align: center; }
+  .warranty h2 { color: var(--cream); font-size: clamp(32px, 4.4vw, 50px); max-width: 20ch; margin: 0 auto; }
+  .warranty .sub { color: var(--cream-muted); max-width: 620px; margin: 22px auto 0; font-size: 16.5px; }
+  .wr-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px;
+    max-width: 980px; margin: 56px auto 0;
+  }
+  .wr-item {
+    border: 1px solid rgba(198,161,91,0.3); border-radius: 14px; padding: 34px 28px;
+    background: rgba(255,255,255,0.03);
+  }
+  .wr-item .big { font-family: var(--serif); color: var(--gold); font-size: 40px; font-weight: 600; line-height: 1; }
+  .wr-item h3 { color: var(--cream); font-size: 18px; margin-top: 14px; font-family: var(--sans); font-weight: 600; }
+  .wr-item p { color: var(--cream-muted); font-size: 14px; margin-top: 8px; }
+  @media (max-width: 860px) { .wr-grid { grid-template-columns: 1fr; max-width: 460px; } }
+
+  /* ============ Testimonials ============ */
+  .quotes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+  .qcard {
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+    padding: 38px 34px; box-shadow: 0 10px 30px rgba(20,40,30,0.06);
+    display: flex; flex-direction: column;
+  }
+  .qcard .qm { font-family: var(--serif); color: var(--gold); font-size: 64px; line-height: 0.6; margin-bottom: 22px; }
+  .qcard blockquote { font-family: var(--serif); font-style: italic; font-size: 17.5px; line-height: 1.6; flex: 1; }
+  .qcard .who { margin-top: 26px; padding-top: 20px; border-top: 1px solid var(--line); }
+  .qcard .who .n { font-weight: 700; font-size: 14.5px; }
+  .qcard .who .w { color: var(--muted); font-size: 13px; margin-top: 2px; }
+  .qcard .stars { color: var(--gold); letter-spacing: 3px; font-size: 13px; margin-bottom: 14px; }
+  @media (max-width: 940px) { .quotes-grid { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; } }
+
+  /* ============ Service area ============ */
+  .area .wrap { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 70px; align-items: center; }
+  .area h2 { font-size: clamp(30px, 3.8vw, 44px); }
+  .area p { color: var(--muted); margin-top: 18px; }
+  .area-cities { display: flex; flex-wrap: wrap; gap: 10px; }
+  .area-cities span {
+    background: var(--card); border: 1px solid var(--line); border-radius: 100px;
+    padding: 9px 20px; font-size: 14px; font-weight: 500; color: var(--ink);
+  }
+  .area-cities span.hq { background: var(--pine); color: var(--cream); border-color: var(--pine); }
+  @media (max-width: 880px) { .area .wrap { grid-template-columns: 1fr; gap: 34px; } }
+
+  /* ============ Quote form ============ */
+  .quote { background: var(--pine); position: relative; overflow: hidden; padding: 110px 0; }
+  .quote::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(900px 600px at 100% 0%, rgba(198,161,91,0.09), transparent 55%);
+  }
+  .quote .wrap { position: relative; z-index: 1; display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 70px; align-items: start; }
+  .q-copy { padding-top: 20px; }
+  .q-copy h2 { color: var(--cream); font-size: clamp(32px, 4.2vw, 50px); }
+  .q-copy > p { color: var(--cream-muted); margin-top: 20px; font-size: 16.5px; max-width: 460px; }
+  .q-contacts { margin-top: 40px; display: grid; gap: 18px; }
+  .q-contacts a {
+    color: var(--cream); text-decoration: none; display: flex; gap: 14px; align-items: center;
+    font-weight: 600; font-size: 16px;
+  }
+  .q-contacts a:hover { color: var(--gold-2); }
+  .q-contacts svg { width: 20px; height: 20px; fill: var(--gold); flex-shrink: 0; }
+  .q-note { margin-top: 36px; color: var(--cream-muted); font-size: 13.5px; border-left: 2px solid var(--gold); padding-left: 16px; }
+
+  .qform {
+    background: var(--card); border-radius: 16px; padding: 44px 42px;
+    box-shadow: 0 40px 90px rgba(5,20,16,0.4);
+  }
+  .qform h3 { font-size: 25px; }
+  .qform .fsub { color: var(--muted); font-size: 14.5px; margin: 8px 0 28px; }
+  .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
   .field { display: flex; flex-direction: column; gap: 7px; }
   .field.full { grid-column: 1 / -1; }
-  .field label { font-size: 12.5px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--muted); }
+  .field label { font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); }
   .field input, .field select, .field textarea {
-    background: #0b0c0f; border: 1px solid var(--line); border-radius: 9px; color: var(--text);
-    padding: 13px 14px; font-size: 15px; font-family: inherit; outline: none; transition: border-color 0.15s, box-shadow 0.15s;
+    font-family: var(--sans); font-size: 15px; color: var(--ink);
+    background: var(--cream); border: 1px solid var(--line); border-radius: 8px;
+    padding: 13px 15px; outline: none; transition: border-color 0.15s, box-shadow 0.15s;
     width: 100%;
   }
-  .field textarea { resize: vertical; min-height: 92px; }
-  .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(245,184,0,0.14); }
-  .field input::placeholder, .field textarea::placeholder { color: #5a626c; }
-  .field select { appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%23f5b800' stroke-width='2' fill='none'/></svg>"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
-  .bf-submit { width: 100%; justify-content: center; margin-top: 8px; }
-  .bf-note { color: var(--muted-2); font-size: 12px; text-align: center; margin-top: 14px; line-height: 1.5; }
-  .bf-success { display: none; text-align: center; padding: 30px 10px; }
-  .bf-success.show { display: block; }
-  .bf-success .check { width: 64px; height: 64px; margin: 0 auto 18px; }
-  .bf-success h3 { color: var(--gold); font-size: 24px; }
-  .bf-success p { color: var(--muted); font-size: 15px; margin-top: 10px; }
-  @media (max-width: 920px) { .bid-grid { grid-template-columns: 1fr; gap: 40px; } }
-  @media (max-width: 560px) { .form-row { grid-template-columns: 1fr; } }
+  .field textarea { resize: vertical; min-height: 96px; }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    border-color: var(--gold); box-shadow: 0 0 0 3px rgba(198,161,91,0.18);
+  }
+  .field input::placeholder, .field textarea::placeholder { color: #A8ABA0; }
+  .q-submit {
+    width: 100%; justify-content: center; margin-top: 8px;
+    background: var(--pine); color: var(--cream); font-size: 16px;
+  }
+  .q-submit:hover { background: var(--pine-2); transform: translateY(-1px); box-shadow: 0 14px 34px rgba(15,49,42,0.35); }
+  .q-submit:disabled { opacity: 0.6; cursor: wait; transform: none; }
+  .q-fine { text-align: center; color: var(--muted); font-size: 12.5px; margin-top: 16px; }
+  .q-success { display: none; text-align: center; padding: 40px 10px; }
+  .q-success.show { display: block; }
+  .q-success svg { width: 74px; height: 74px; margin: 0 auto 24px; }
+  .q-success h3 { font-size: 26px; margin-bottom: 12px; }
+  .q-success p { color: var(--muted); max-width: 380px; margin: 0 auto; }
+  @media (max-width: 940px) {
+    .quote .wrap { grid-template-columns: 1fr; gap: 46px; }
+    .qform { padding: 34px 26px; }
+  }
+  @media (max-width: 560px) { .frow { grid-template-columns: 1fr; } }
+
+  /* ============ FAQ ============ */
+  .faq-list { max-width: 820px; margin: 0 auto; }
+  .faq-item { border-bottom: 1px solid var(--line); }
+  .faq-item:first-child { border-top: 1px solid var(--line); }
+  .faq-q {
+    width: 100%; background: none; border: none; cursor: pointer; text-align: left;
+    display: flex; justify-content: space-between; align-items: center; gap: 20px;
+    padding: 26px 4px; font-family: var(--serif); font-size: 19px; font-weight: 600; color: var(--ink);
+  }
+  .faq-q .chev { font-family: var(--sans); color: var(--gold); font-size: 26px; font-weight: 400; transition: transform 0.25s; flex-shrink: 0; line-height: 1; }
+  .faq-item.open .chev { transform: rotate(45deg); }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+  .faq-a p { color: var(--muted); font-size: 15px; padding: 0 4px 26px; max-width: 700px; }
 
   /* ============ Footer ============ */
-  footer.site-footer { background: #060708; border-top: 1px solid var(--line); padding: 64px 0 28px; }
-  .foot-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: 40px; }
-  .foot-brand img { height: 64px; margin-bottom: 18px; }
-  .foot-brand p { color: var(--muted); font-size: 14.5px; max-width: 320px; }
-  .foot-col h4 { font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
-  .foot-col a, .foot-col p { color: var(--muted); font-size: 14.5px; text-decoration: none; display: block; line-height: 2; margin: 0; }
-  .foot-col a:hover { color: var(--gold); }
-  .naics { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
-  .naics span { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 5px 10px; font-size: 12px; color: var(--muted); font-weight: 600; }
-  .foot-bottom { border-top: 1px solid var(--line); margin-top: 44px; padding-top: 24px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; color: var(--muted-2); font-size: 13px; }
-  @media (max-width: 880px) { .foot-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
-  @media (max-width: 520px) { .foot-grid { grid-template-columns: 1fr; } }
+  footer.site-footer { background: var(--pine-3); border-top: 2px solid var(--gold); padding: 80px 0 0; }
+  .fgrid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.1fr; gap: 50px; padding-bottom: 60px; }
+  .fbrand img { height: 110px; width: auto; margin-bottom: 20px; }
+  .fbrand p { color: var(--cream-muted); font-size: 14px; max-width: 300px; }
+  .fcol h4 {
+    font-family: var(--sans); color: var(--gold); font-size: 12px; font-weight: 700;
+    letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 20px;
+  }
+  .fcol a, .fcol span { display: block; color: var(--cream-muted); text-decoration: none; font-size: 14.5px; padding: 6px 0; }
+  .fcol a:hover { color: var(--gold-2); }
+  .fbottom {
+    border-top: 1px solid rgba(198,161,91,0.2); padding: 26px 0;
+    display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    color: rgba(250,247,241,0.45); font-size: 13px;
+  }
+  @media (max-width: 980px) { .fgrid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .fgrid { grid-template-columns: 1fr; gap: 36px; } }
 </style>
 </head>
 <body>
@@ -415,410 +445,458 @@
 <div class="topbar">
   <div class="wrap">
     <div class="tb-left">
-      <span><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg><a href="tel:+15806701829">580-670-1829</a></span>
-      <span><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5z"/></svg><a href="mailto:estimating@prestigefenceusa.com">estimating@prestigefenceusa.com</a></span>
+      <a href="tel:+15806701829"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>580-670-1829</a>
+      <a href="mailto:estimating@prestigefenceusa.com"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5z"/></svg>estimating@prestigefenceusa.com</a>
     </div>
     <div class="tb-right">
-      <span>SAM.gov Registered &amp; Bondable</span>
-      <span>UEI &amp; CAGE on File</span>
+      <span>Oklahoma City Metro</span><span class="dot"></span>
+      <span>Licensed &amp; Insured</span><span class="dot"></span>
+      <span>2-Year Workmanship Warranty</span>
     </div>
   </div>
 </div>
 
 <!-- ============ HEADER ============ -->
-<header class="site-header">
+<header class="site" id="hdr">
   <div class="wrap nav">
     <a href="#top" class="brand" aria-label="Prestige Fence home">
-      <img class="brand-logo" src="images/prestige-fence-logo.svg" alt="Prestige Fence" />
+      <img src="images/prestige-fence-logo.svg" alt="Prestige Fence" />
     </a>
-    <nav class="main-nav">
-      <a href="#capabilities">Capabilities</a>
-      <a href="#markets">Markets</a>
-      <a href="#approach">Approach</a>
-      <a href="#safety">Safety</a>
-      <a href="#about">About</a>
+    <nav class="mainnav">
+      <a href="#styles">Fence Styles</a>
+      <a href="#gates">Gates &amp; Access</a>
+      <a href="#finishing">Finishing</a>
+      <a href="#process">Our Process</a>
+      <a href="#warranty">Warranty</a>
+      <a href="#faq">FAQ</a>
     </nav>
-    <a href="#bid" class="nav-cta">Request a Bid</a>
-    <button class="menu-btn" id="menu-open" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <a href="#quote" class="nav-cta">Get a Free Estimate</a>
+    <button class="burger" id="menu-open" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<div class="mobile-menu" id="mobile-menu">
-  <button class="menu-close" id="menu-close" aria-label="Close">&times;</button>
-  <a href="#capabilities">Capabilities</a>
-  <a href="#markets">Markets</a>
-  <a href="#approach">Approach</a>
-  <a href="#safety">Safety</a>
-  <a href="#about">About</a>
-  <a href="#bid" class="mm-cta">Request a Bid</a>
+<div class="mmenu" id="mobile-menu">
+  <button class="close" id="menu-close" aria-label="Close menu">&times;</button>
+  <a href="#styles">Fence Styles</a>
+  <a href="#gates">Gates &amp; Access</a>
+  <a href="#finishing">Finishing</a>
+  <a href="#process">Our Process</a>
+  <a href="#warranty">Warranty</a>
+  <a href="#faq">FAQ</a>
+  <a href="#quote" class="mm-cta">Get a Free Estimate</a>
 </div>
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
-  <div class="hero-bg"></div>
+  <div class="hero-frame"></div>
   <div class="wrap">
-    <div class="hero-grid">
-      <div class="hero-left" style="padding-right: 16px;">
-        <span class="hero-badge">
-          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4z"/></svg>
-          Commercial &amp; Government Specialists
-        </span>
-        <h1>
-          <span class="line">Perimeter Security &amp;</span>
-          <span class="line">Fencing Built to <span class="accent">Spec.</span></span>
-        </h1>
-        <p class="hero-sub">
-          Prestige Fence is a self-performing subcontractor delivering high-security perimeter systems, anti-ram barriers, and automated access control for federal, military, utility, and infrastructure projects nationwide.
-        </p>
-        <div class="hero-actions">
-          <a href="#bid" class="btn btn-gold">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
-            Request a Bid
-          </a>
-          <a href="#capabilities" class="btn btn-ghost">
-            <svg viewBox="0 0 24 24"><path d="M19 13H5v-2h14v2z"/></svg>
-            View Capabilities
-          </a>
-        </div>
-        <div class="hero-meta">
-          <span class="hm"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4zm-1 16l-4-4 1.4-1.4L11 14.2l5.6-5.6L18 10l-7 7z"/></svg>Bonded &amp; Insured</span>
-          <span class="hm"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4zm-1 16l-4-4 1.4-1.4L11 14.2l5.6-5.6L18 10l-7 7z"/></svg>Davis-Bacon Compliant</span>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <div class="hero-img-wrap">
-          <img src="images/fence/chainlink.jpg" alt="Commercial chain-link perimeter fence" class="hero-img" />
-          <div class="hero-img-overlay"></div>
-          <div class="hero-img-badge">
-            <span class="hib-dot"></span>
-            <span>Self-Performing Subcontractor</span>
-          </div>
-        </div>
-      </div>
-
+    <span class="eyebrow">Oklahoma City Metro &middot; Fence &amp; Gate Company</span>
+    <h1>Fences built to a <em>higher standard.</em></h1>
+    <p class="hero-sub">
+      From hand-finished cedar privacy fences to estate gates and full automation, Prestige Fence designs and builds outdoor boundaries that elevate your property — and stand up to Oklahoma weather.
+    </p>
+    <div class="hero-ctas">
+      <a href="#quote" class="btn btn-gold">Request a Free Estimate</a>
+      <a href="#styles" class="btn btn-ghost">Explore Fence Styles</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><div class="n">77</div><div class="l">Products &amp; Services</div></div>
+      <div class="hstat"><div class="n">10</div><div class="l">Fence &amp; Gate Categories</div></div>
+      <div class="hstat"><div class="n">2 Yr</div><div class="l">Warranty Included</div></div>
     </div>
   </div>
 </section>
 
-<!-- ============ CREDENTIAL STRIP ============ -->
-<div class="cred-strip">
+<!-- ============ PHOTO BAND ============ -->
+<div class="band">
+  <img src="images/catalog/hero-fenceline.jpg" alt="Stained cedar privacy fence line on steel posts" />
+  <div class="band-cap"><span>Board-on-board cedar on steel posts — stained, capped, and built to last.</span></div>
+</div>
+
+<!-- ============ CRED STRIP ============ -->
+<div class="creds">
   <div class="wrap">
-    <span class="label">Qualified &amp; Compliant</span>
-    <span class="cred"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4z"/></svg>Licensed &amp; Bonded</span>
-    <span class="cred"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4zm-1 16l-4-4 1.4-1.4L11 14.2l5.6-5.6L18 10l-7 7z"/></svg>SAM.gov Active</span>
-    <span class="cred"><svg viewBox="0 0 24 24"><path d="M20 6h-3V4a2 2 0 00-2-2H9a2 2 0 00-2 2v2H4a2 2 0 00-2 2v11a2 2 0 002 2h16a2 2 0 002-2V8a2 2 0 00-2-2zM9 4h6v2H9V4z"/></svg>Certified Payroll</span>
+    <span class="cred"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4zm-1 16l-4-4 1.4-1.4L11 14.2l5.6-5.6L18 10l-7 7z"/></svg>Licensed &amp; Insured</span>
+    <span class="cred"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4z"/></svg>2-Year Workmanship Warranty</span>
+    <span class="cred"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 7.7l5.4-.8z"/></svg>Military Discount</span>
+    <span class="cred"><svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3z"/></svg>Family Owned &amp; Operated</span>
   </div>
 </div>
 
-<!-- ============ CAPABILITIES ============ -->
-<section class="block" id="capabilities">
+<!-- ============ FENCE STYLES ============ -->
+<section class="sec" id="styles">
   <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow center">What We Self-Perform</div>
-      <h2 class="section-title">Full-Scope <span class="accent">Fencing &amp; Perimeter</span> Capabilities</h2>
-      <p class="section-desc">From the first survey stake to final punch list, our crews self-perform the work — no layered subs, no schedule risk.</p>
+    <div class="sec-head center rv">
+      <span class="eyebrow">01 &middot; Fence Styles</span>
+      <h2>Crafted for every property.</h2>
+      <hr class="rule center" />
+      <p>Wood, vinyl, steel, chain link, and ranch systems — every line installed by our own crews with premium materials and clean, consistent detail work.</p>
     </div>
-
-    <div class="cap-grid">
-      <div class="cap">
-        <div class="cap-ico"><svg viewBox="0 0 24 24"><path d="M3 4h2v16H3zM7 4h2v16H7zM11 4h2v16h-2zM15 4h2v16h-2zM19 4h2v16h-2z"/></svg></div>
-        <h3>High-Security Perimeter</h3>
-        <p>K-rated and ASTM F2656 anti-ram fence lines, 8'–12' security enclosures, and intrusion-resistant barriers for sensitive sites.</p>
-      </div>
-      <div class="cap">
-        <div class="cap-ico"><svg viewBox="0 0 24 24"><path d="M2 12h20M5 8h14M5 16h14M9 4v16M15 4v16"/><path d="M2 11h20v2H2zM4 7h16v2H4zM4 15h16v2H4z"/></svg></div>
-        <h3>Chain Link &amp; Welded Wire</h3>
-        <p>Galvanized and vinyl-coated chain link, welded mesh, and PVC systems engineered for industrial and utility spec compliance.</p>
-      </div>
-      <div class="cap">
-        <div class="cap-ico"><svg viewBox="0 0 24 24"><path d="M4 3h2v18H4zM18 3h2v18h-2zM8 3h1v18H8zM11 3h1v18h-1zM14 3h1v18h-1z"/><path d="M3 5h18v2H3z"/></svg></div>
-        <h3>Ornamental Steel &amp; Aluminum</h3>
-        <p>Architectural picket and palisade fencing with industrial coatings — secure perimeters that still meet design review.</p>
-      </div>
-      <div class="cap">
-        <div class="cap-ico"><svg viewBox="0 0 24 24"><path d="M3 11h18v2H3zM5 7h14v2H5zM5 15h14v2H5z"/><circle cx="19" cy="12" r="2"/></svg></div>
-        <h3>Anti-Ram &amp; Crash Barriers</h3>
-        <p>Crash-rated gates, bollards, wedge barriers, and cable-reinforced fence for force-protection and DoD UFC standards.</p>
-      </div>
-      <div class="cap">
-        <div class="cap-ico"><svg viewBox="0 0 24 24"><path d="M12 1a5 5 0 00-5 5v3H6a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2v-8a2 2 0 00-2-2h-1V6a5 5 0 00-5-5zm3 8H9V6a3 3 0 016 0v3z"/></svg></div>
-        <h3>Automated Access Control</h3>
-        <p>Slide and swing operators, card/biometric readers, loop detection, and gate integration with site security networks.</p>
-      </div>
-      <div class="cap">
-        <div class="cap-ico"><svg viewBox="0 0 24 24"><path d="M12 2l9 4.5v5C21 17 17 21.5 12 23 7 21.5 3 17 3 11.5v-5L12 2z"/></svg></div>
-        <h3>Detention &amp; Correctional</h3>
-        <p>Maximum-security enclosures, razor coil, anti-climb mesh, and sally ports built to correctional facility specifications.</p>
-      </div>
-      <div class="cap">
-        <div class="cap-ico"><svg viewBox="0 0 24 24"><path d="M3 21v-2h2v-6H3l9-9 9 9h-2v6h2v2H3zm6-2h2v-4H9v4zm4 0h2v-6h-2v6z"/></svg></div>
-        <h3>Substation &amp; Critical Infrastructure</h3>
-        <p>NERC CIP-compliant utility enclosures, grounding-tied fence systems, and screening for energy and water assets.</p>
-      </div>
-      <div class="cap">
-        <div class="cap-ico"><svg viewBox="0 0 24 24"><path d="M2 12l10-9 10 9h-3v8h-5v-5H10v5H5v-8H2z"/></svg></div>
-        <h3>Sports, Aviation &amp; Recreation</h3>
-        <p>Airport perimeter (FAA), ballfield backstops, tennis enclosures, and high-tension systems for large public facilities.</p>
-      </div>
-      <div class="cap">
-        <div class="cap-ico"><svg viewBox="0 0 24 24"><path d="M4 4h16v3H4zM4 9h16v3H4zM4 14h16v3H4zM7 4v13M12 4v13M17 4v13"/></svg></div>
-        <h3>Temporary &amp; Construction</h3>
-        <p>Rapid-deploy panel fencing, jobsite security enclosures, and phased temporary perimeters for active project sites.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ MARKETS ============ -->
-<section class="block alt" id="markets">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow center">Sectors We Serve</div>
-      <h2 class="section-title">Trusted on <span class="accent">Mission-Critical</span> Projects</h2>
-      <p class="section-desc">We partner with general contractors, agencies, and facility owners on projects where security, compliance, and schedule cannot fail.</p>
-    </div>
-
-    <div class="markets">
-      <div class="market" style="background-image:url('images/fence/chainlink.jpg')">
-        <div class="m-body">
-          <div class="m-ico"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4z"/></svg></div>
-          <h3>Federal &amp; Military</h3>
-          <p>Bases, DoD force-protection, federal facilities</p>
+    <div class="styles-grid">
+      <div class="scard rv">
+        <div class="ph"><img src="images/catalog/cedar-privacy.jpg" alt="Stained cedar privacy fence" loading="lazy" /></div>
+        <div class="body">
+          <div class="tag">Wood &amp; Cedar</div>
+          <h3>Cedar Privacy</h3>
+          <p>Solid-screen cedar pickets and rails on set posts — a warm, classic privacy line that takes stain beautifully.</p>
         </div>
       </div>
-      <div class="market" style="background-image:url('images/fence/aluminum.jpg')">
-        <div class="m-body">
-          <div class="m-ico"><svg viewBox="0 0 24 24"><path d="M12 2L2 7v2h20V7L12 2zM4 11v7H2v2h20v-2h-2v-7h-2v7h-3v-7h-2v7h-2v-7H9v7H6v-7H4z"/></svg></div>
-          <h3>Government &amp; Municipal</h3>
-          <p>City, county, state agency facilities</p>
+      <div class="scard rv">
+        <div class="ph"><img src="images/catalog/board-on-board.jpg" alt="Cedar board-on-board fence" loading="lazy" /></div>
+        <div class="body">
+          <div class="tag">Wood &amp; Cedar</div>
+          <h3>Board-on-Board</h3>
+          <p>Overlapping pickets on alternating sides eliminate gaps as the wood dries — finished cleanly from both sides.</p>
         </div>
       </div>
-      <div class="market" style="background-image:url('images/fence/wood.jpg')">
-        <div class="m-body">
-          <div class="m-ico"><svg viewBox="0 0 24 24"><path d="M3 21v-2h2v-6H3l9-9 9 9h-2v6h2v2H3z"/></svg></div>
-          <h3>Utilities &amp; Energy</h3>
-          <p>Substations, solar, water treatment</p>
+      <div class="scard rv">
+        <div class="ph"><img src="images/catalog/colonial-cap.jpg" alt="Colonial cap and top rail cedar fence" loading="lazy" /></div>
+        <div class="body">
+          <div class="tag">Wood &amp; Cedar</div>
+          <h3>Colonial Cap &amp; Trim</h3>
+          <p>Square posts, cap board, trim, and kickboard — our most refined wood fence, built for standout curb appeal.</p>
         </div>
       </div>
-      <div class="market" style="background-image:url('images/fence/vinyl.jpg')">
-        <div class="m-body">
-          <div class="m-ico"><svg viewBox="0 0 24 24"><path d="M22 16l-10-4L2 16l4 2v3l6 3 6-3v-3l2-1zm-10-9L2 11l10 4 10-4-10-4z"/></svg></div>
-          <h3>Aviation &amp; Transportation</h3>
-          <p>Airports (FAA), DOT, rail, ports</p>
+      <div class="scard rv">
+        <div class="ph"><img src="images/catalog/vinyl-privacy.jpg" alt="White vinyl privacy fence" loading="lazy" /></div>
+        <div class="body">
+          <div class="tag">Vinyl</div>
+          <h3>Vinyl Privacy &amp; Ranch Rail</h3>
+          <p>UV- and weather-resistant panels and rail systems backed by manufacturer warranty — durability with zero staining.</p>
         </div>
       </div>
-      <div class="market" style="background-image:url('images/services/fence.jpg')">
-        <div class="m-body">
-          <div class="m-ico"><svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg></div>
-          <h3>Industrial &amp; Commercial</h3>
-          <p>Distribution, manufacturing, logistics</p>
+      <div class="scard rv">
+        <div class="ph"><img src="images/catalog/ornamental-steel.jpg" alt="Black ornamental steel fence" loading="lazy" /></div>
+        <div class="body">
+          <div class="tag">Steel</div>
+          <h3>Ornamental Steel</h3>
+          <p>Powder-coated steel posts and panels for open, secure boundaries with a sleek, estate-grade look.</p>
         </div>
       </div>
-      <div class="market" style="background-image:url('images/fence/chainlink.jpg')">
-        <div class="m-body">
-          <div class="m-ico"><svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.9V17h2V9L12 3z"/><path d="M5 13.2V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8l-7 3.8-7-3.8z"/></svg></div>
-          <h3>Education</h3>
-          <p>K-12 campuses, universities, athletics</p>
+      <div class="scard rv">
+        <div class="ph"><img src="images/catalog/chain-link-cedar.jpg" alt="Black chain link fence with cedar posts" loading="lazy" /></div>
+        <div class="body">
+          <div class="tag">Chain Link</div>
+          <h3>Chain Link</h3>
+          <p>Galvanized and black-coated systems — including our signature black chain link on cedar posts and rails.</p>
         </div>
       </div>
-      <div class="market" style="background-image:url('images/fence/aluminum.jpg')">
-        <div class="m-body">
-          <div class="m-ico"><svg viewBox="0 0 24 24"><path d="M12 2l9 4.5v5C21 17 17 21.5 12 23 7 21.5 3 17 3 11.5v-5L12 2z"/></svg></div>
-          <h3>Correctional &amp; Detention</h3>
-          <p>Secure facilities, high-security perimeters</p>
+      <div class="scard rv">
+        <div class="ph"><img src="images/catalog/ranch-rail.jpg" alt="Highplains ranch rail fence" loading="lazy" /></div>
+        <div class="body">
+          <div class="tag">Ranch &amp; Ag</div>
+          <h3>Ranch Rail</h3>
+          <p>Cedar rails on durable metal posts — the classic open ranch look with a sturdy, long-lasting boundary.</p>
         </div>
       </div>
-      <div class="market" style="background-image:url('images/services/fence.jpg')">
-        <div class="m-body">
-          <div class="m-ico"><svg viewBox="0 0 24 24"><path d="M4 4h16v4H4zM4 10h16v4H4zM4 16h16v4H4z"/></svg></div>
-          <h3>General Contractors</h3>
-          <p>Reliable fence package partner on bid day</p>
+      <div class="scard rv">
+        <div class="ph"><img src="images/catalog/ranch-vista.jpg" alt="Barbwire fence across open pasture" loading="lazy" /></div>
+        <div class="body">
+          <div class="tag">Ranch &amp; Ag</div>
+          <h3>Barbwire &amp; Woven Wire</h3>
+          <p>Five, six, and seven-strand barbwire plus woven wire — stretched, braced, and stapled for secure livestock lines.</p>
+        </div>
+      </div>
+      <div class="scard rv">
+        <div class="ph"><img src="images/catalog/wood-ranch.jpg" alt="Wood ranch style fence" loading="lazy" /></div>
+        <div class="body">
+          <div class="tag">Ranch &amp; Ag</div>
+          <h3>Wood Ranch Style</h3>
+          <p>Custom post-and-rail ranch fencing with crossbuck options — laid out, aligned, and finished to spec.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-
-<!-- ============ WHY / DIFFERENTIATORS ============ -->
-<section class="block alt" id="approach">
+<!-- ============ GATES & ACCESS ============ -->
+<section class="sec sec-sage" id="gates">
   <div class="wrap">
-    <div class="why-wrap">
-      <div>
-        <div class="eyebrow">Why GCs &amp; Agencies Choose Us</div>
-        <h2 class="section-title">A Subcontractor That <span class="accent">De-Risks</span> Your Schedule</h2>
-        <p class="section-desc">When the fence package is on the critical path, you need a partner who shows up bonded, staffed, and ready to build.</p>
-        <div class="why-side" style="margin-top:30px">
-          <div class="quote-mark">&ldquo;</div>
-          <blockquote>Prestige came in bonded, mobilized in two weeks, and closed out 4,200 linear feet ahead of our milestone. They're on our shortlist for every secure-site bid.</blockquote>
-          <div class="qa">
-            <div class="av">RM</div>
-            <div>
-              <div class="qn">Robert Mason</div>
-              <div class="qt">Senior PM · National General Contractor</div>
-            </div>
-          </div>
-        </div>
+    <div class="sec-head rv">
+      <span class="eyebrow">02 &middot; Gates &amp; Access</span>
+      <h2>Grand entrances, smart access.</h2>
+      <hr class="rule" />
+    </div>
+    <div class="gates-feature rv">
+      <div class="gf-photo"><img src="images/catalog/gate-estate.jpg" alt="Ornamental steel double drive estate gate with stone columns" loading="lazy" /></div>
+      <div class="gf-copy">
+        <h3>From walk gates to full estate entrances.</h3>
+        <p>Every gate is welded, hung, and adjusted by our crews — with heavy-duty hinges, latches, and drop rods included. Add automation and entry control to complete the system.</p>
+        <ul class="gf-list">
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.5z"/></svg>Cedar, vinyl, steel, chain link &amp; pipe gates</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.5z"/></svg>Single walk gates to 20' double drive gates</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.5z"/></svg>Automatic openers with keypad &amp; remote entry</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.5z"/></svg>Pool-code safety gates &amp; self-closing hardware</li>
+        </ul>
       </div>
+    </div>
+    <div class="gates-grid">
+      <div class="scard rv">
+        <div class="ph"><img src="images/catalog/gate-walk.jpg" alt="Ornamental steel walk gate" loading="lazy" /></div>
+        <div class="body"><div class="tag">Pedestrian</div><h3>Walk Gates</h3><p>Matched to your fence line in cedar, vinyl, steel, or chain link.</p></div>
+      </div>
+      <div class="scard rv">
+        <div class="ph"><img src="images/catalog/gate-wood-double.jpg" alt="Wood double drive gate" loading="lazy" /></div>
+        <div class="body"><div class="tag">Vehicle</div><h3>Drive Gates</h3><p>X-braced double gates on steel posts, built to resist sagging and Oklahoma wind.</p></div>
+      </div>
+      <div class="scard rv">
+        <div class="ph"><img src="images/catalog/gate-opener.jpg" alt="Automatic gate opener arm" loading="lazy" /></div>
+        <div class="body"><div class="tag">Automation</div><h3>Automatic Openers</h3><p>Open your drive gate from the car — solar and hardwired options.</p></div>
+      </div>
+      <div class="scard rv">
+        <div class="ph"><img src="images/catalog/gate-keypad.jpg" alt="Keypad gate entry system" loading="lazy" /></div>
+        <div class="body"><div class="tag">Access Control</div><h3>Keypad &amp; Remote Entry</h3><p>Code and remote access for family, guests, and deliveries.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <div class="why-list">
-        <div class="why-item">
-          <div class="why-num">01</div>
-          <div><h3>Self-Performing Crews</h3><p>We don't broker the work. Our own trained crews execute the scope, protecting quality, safety, and your schedule.</p></div>
-        </div>
-        <div class="why-item">
-          <div class="why-num">02</div>
-          <div><h3>Prevailing Wage &amp; Certified Payroll</h3><p>Davis-Bacon experienced with full certified payroll, compliance reporting, and DBE/SDVOSB teaming when required.</p></div>
-        </div>
-        <div class="why-item">
-          <div class="why-num">03</div>
-          <div><h3>Preconstruction &amp; Estimating</h3><p>Detailed takeoffs, value engineering, and submittal-ready packages that keep your procurement moving.</p></div>
-        </div>
+<!-- ============ FINISHING TOUCHES ============ -->
+<section class="sec sec-dark" id="finishing">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">03 &middot; Finishing Touches</span>
+      <h2>The details that set a Prestige fence apart.</h2>
+      <hr class="rule" />
+      <p>Upgrades that turn a fence into a feature — professionally applied finishes, architectural trim, and lighting.</p>
+    </div>
+    <div class="fin-grid">
+      <div class="fcard rv">
+        <div class="ph"><img src="images/catalog/stain-crew.jpg" alt="Crew spray-staining a cedar fence" loading="lazy" /></div>
+        <div class="body"><h3>Stain &amp; Finish</h3><p>Oil-based stain that penetrates deeply and resists cracking, chipping, and peeling — in Natural Cedar, Redwood, or Pecan.</p></div>
       </div>
+      <div class="fcard rv">
+        <div class="ph"><img src="images/catalog/cap-double-trim.jpg" alt="Cedar flat cap with double tiered trim" loading="lazy" /></div>
+        <div class="body"><h3>Cap &amp; Trim</h3><p>Flat caps with single or double-tiered trim for a finished edge that shields picket tops from weather.</p></div>
+      </div>
+      <div class="fcard rv">
+        <div class="ph"><img src="images/catalog/lattice-topper.jpg" alt="Cedar lattice topper on privacy fence" loading="lazy" /></div>
+        <div class="body"><h3>Lattice Toppers</h3><p>Decorative lattice adds height, airflow, and architectural style along the top of the fence.</p></div>
+      </div>
+      <div class="fcard rv">
+        <div class="ph"><img src="images/catalog/solar-light.jpg" alt="Solar post lights glowing on a fence at dusk" loading="lazy" /></div>
+        <div class="body"><h3>Post Caps &amp; Lighting</h3><p>Cedar, metal, and copper post caps — plus solar post lights that make the fence line glow after dark.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CRAFTSMANSHIP ============ -->
+<section class="sec">
+  <div class="wrap craft">
+    <div class="craft-photo rv"><img src="images/catalog/cedar-8ft.jpg" alt="8 foot cedar privacy fence along a walkway" loading="lazy" /></div>
+    <div class="rv">
+      <span class="eyebrow">04 &middot; Built Right</span>
+      <h2>Engineered for Oklahoma weather.</h2>
+      <p>Wind, clay soil, and hard sun are brutal on a fence. Ours are built for it — from the footing up.</p>
+      <ul class="craft-list">
+        <li><span class="num">I.</span><div><h4>Steel posts, set in concrete</h4><p>Galvanized steel posts resist leaning and rot far beyond wood-on-dirt construction.</p></div></li>
+        <li><span class="num">II.</span><div><h4>Cedar kickboards</h4><p>A rot board at ground level takes the soil contact so pickets stay dry and last longer.</p></div></li>
+        <li><span class="num">III.</span><div><h4>Braced corners &amp; gate openings</h4><p>H-braces and corner assemblies keep tensioned lines plumb and tight for years.</p></div></li>
+        <li><span class="num">IV.</span><div><h4>Clean sites, every day</h4><p>Old fence hauled off, debris cleared, and a final walkthrough before we call it done.</p></div></li>
+      </ul>
     </div>
   </div>
 </section>
 
 <!-- ============ PROCESS ============ -->
-<section class="block" id="process">
+<section class="sec sec-sage" id="process">
   <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow center">How We Deliver</div>
-      <h2 class="section-title">From Bid Day to <span class="accent">Closeout</span></h2>
-      <p class="section-desc">A disciplined, documented process that keeps owners and GCs informed at every milestone.</p>
+    <div class="sec-head center rv">
+      <span class="eyebrow">05 &middot; Our Process</span>
+      <h2>Simple from first call to final walkthrough.</h2>
+      <hr class="rule center" />
     </div>
-    <div class="process">
-      <div class="pstep">
+    <div class="proc-grid">
+      <div class="pcard rv">
         <div class="pn">01</div>
-        <h3>Estimating &amp; Preconstruction</h3>
-        <p>Plan and spec review, quantity takeoffs, value engineering, and a complete, competitive bid package.</p>
+        <h3>Free On-Site Estimate</h3>
+        <p>We walk the property, talk through styles and options, and deliver a clear, itemized quote.</p>
       </div>
-      <div class="pstep">
+      <div class="pcard rv">
         <div class="pn">02</div>
-        <h3>Submittals &amp; Mobilization</h3>
-        <p>Shop drawings, product data, certified materials, safety plans, and scheduled mobilization.</p>
+        <h3>Design &amp; Materials</h3>
+        <p>Fence style, height, gates, finish, and add-ons locked in — with premium materials sourced and scheduled.</p>
       </div>
-      <div class="pstep">
+      <div class="pcard rv">
         <div class="pn">03</div>
-        <h3>Self-Perform Installation</h3>
-        <p>Trained crews, daily reports, QA/QC inspections, and proactive coordination with the GC schedule.</p>
+        <h3>Expert Installation</h3>
+        <p>Our own crews set posts, build the line, and hang gates — no subcontracted shortcuts.</p>
       </div>
-      <div class="pstep">
+      <div class="pcard rv">
         <div class="pn">04</div>
-        <h3>Inspection &amp; Closeout</h3>
-        <p>Final punch, as-builts, O&amp;M manuals, warranties, and certified payroll documentation.</p>
+        <h3>Walkthrough &amp; Warranty</h3>
+        <p>We walk the finished fence with you, clean the site, and back the work with a 2-year warranty.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ SAFETY / COMPLIANCE ============ -->
-<section class="block alt" id="safety">
-  <div class="wrap">
-    <div class="safety-wrap">
-      <div>
-        <div class="eyebrow">Safety &amp; Compliance</div>
-        <h2 class="section-title">Prequalified, <span class="accent">Compliant</span>, and Audit-Ready</h2>
-        <p class="section-desc">Safety isn't a slogan — it's how we keep crews protected and projects moving. We meet the documentation requirements of the most demanding owners.</p>
-        <ul class="compliance-list">
-          <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.5z"/></svg>Davis-Bacon / Prevailing Wage</li>
-          <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.5z"/></svg>Certified Payroll Reporting</li>
-          <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.5z"/></svg>Site-Specific Safety Plans</li>
-          <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.5z"/></svg>SAM.gov / UEI / CAGE on File</li>
-          <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.5z"/></svg>$5M General Liability</li>
-          <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.5z"/></svg>EEO / Drug-Free Workplace</li>
-          <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.5z"/></svg>DBE / SDVOSB Teaming</li>
-        </ul>
+<!-- ============ WARRANTY ============ -->
+<section class="warranty" id="warranty">
+  <div class="wr-frame"></div>
+  <div class="wrap rv">
+    <span class="eyebrow">06 &middot; Our Promise</span>
+    <h2>Craftsmanship we stand behind.</h2>
+    <p class="sub">Every Prestige fence includes a two-year workmanship warranty at no charge — if something we built fails from improper installation, we inspect and repair it at no labor cost.</p>
+    <div class="wr-grid">
+      <div class="wr-item">
+        <div class="big">2 Yr</div>
+        <h3>Workmanship Warranty</h3>
+        <p>Included free on every installation.</p>
       </div>
-      <div class="safety-stats">
-        <div class="safety-stat"><div class="ss-v">0.71</div><div class="ss-l">Experience Mod Rate</div></div>
-        <div class="safety-stat"><div class="ss-v">1.2M+</div><div class="ss-l">Safe Man-Hours</div></div>
-        <div class="safety-stat"><div class="ss-v">0</div><div class="ss-l">Lost-Time Incidents (24 mo.)</div></div>
-        <div class="safety-stat"><div class="ss-v">100%</div><div class="ss-l">Prequal Pass Rate</div></div>
+      <div class="wr-item">
+        <div class="big">5 Yr</div>
+        <h3>Extended Coverage</h3>
+        <p>Optional extended workmanship warranty for long-term peace of mind.</p>
+      </div>
+      <div class="wr-item">
+        <div class="big">5%</div>
+        <h3>Military Discount</h3>
+        <p>For active-duty service members, veterans, and their immediate families.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ ABOUT (short) + BID ============ -->
-<section class="block bid" id="bid">
-  <div class="bid-bg"></div>
+<!-- ============ TESTIMONIALS ============ -->
+<section class="sec">
   <div class="wrap">
-    <div class="bid-grid">
-      <div class="bid-info" id="about">
-        <div class="eyebrow">Invite Us to Bid</div>
-        <h2>Add Prestige Fence to Your <span class="accent">Bid List</span></h2>
-        <p>Send us your plans, specs, and bid date. Our estimating team will return a complete, competitive fence package — typically within 48 hours of plan review.</p>
-        <ul class="bid-points">
-          <li>
-            <span class="bp-ico"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.5z"/></svg></span>
-            <span><strong>Fast, complete bids</strong><span>Detailed takeoffs and submittal-ready scope.</span></span>
-          </li>
-          <li>
-            <span class="bp-ico"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.5z"/></svg></span>
-            <span><strong>Bonded &amp; prequalified</strong><span>Bonding, insurance, and compliance docs on request.</span></span>
-          </li>
-          <li>
-            <span class="bp-ico"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.5-1.5z"/></svg></span>
-            <span><strong>One reliable partner</strong><span>Self-performed from mobilization to closeout.</span></span>
-          </li>
-        </ul>
-        <div class="bid-contact">
-          <a href="tel:+15806701829"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>580-670-1829</a>
-          <a href="mailto:estimating@prestigefenceusa.com"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5z"/></svg>estimating@prestigefenceusa.com</a>
-        </div>
+    <div class="sec-head center rv">
+      <span class="eyebrow">07 &middot; Reviews</span>
+      <h2>What homeowners say.</h2>
+      <hr class="rule center" />
+    </div>
+    <div class="quotes-grid">
+      <div class="qcard rv">
+        <div class="stars">★★★★★</div>
+        <blockquote>The crew showed up when they said they would, worked clean, and the board-on-board fence with the stained finish looks incredible. Neighbors keep asking who built it.</blockquote>
+        <div class="who"><div class="n">Sarah M.</div><div class="w">Cedar Board-on-Board &middot; Edmond</div></div>
       </div>
+      <div class="qcard rv">
+        <div class="stars">★★★★★</div>
+        <blockquote>They replaced our leaning old fence with steel posts and a capped cedar line, hauled everything off, and left the yard cleaner than they found it.</blockquote>
+        <div class="who"><div class="n">James T.</div><div class="w">Cedar Privacy Replacement &middot; Yukon</div></div>
+      </div>
+      <div class="qcard rv">
+        <div class="stars">★★★★★</div>
+        <blockquote>We had them do a drive gate with an automatic opener and keypad. The whole system works flawlessly and the gate hasn't sagged an inch.</blockquote>
+        <div class="who"><div class="n">Mike R.</div><div class="w">Automated Drive Gate &middot; Mustang</div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <div class="bid-form">
-        <form id="bid-request" novalidate>
-          <h3>Request a Bid</h3>
-          <p class="bf-sub">Tell us about the project. Required fields marked.</p>
-          <div class="form-row">
-            <div class="field"><label>Company *</label><input type="text" id="bf-company" placeholder="GC / Owner / Agency" required /></div>
-            <div class="field"><label>Contact Name *</label><input type="text" id="bf-name" placeholder="Your name" required /></div>
-          </div>
-          <div class="form-row">
-            <div class="field"><label>Email *</label><input type="email" id="bf-email" placeholder="name@company.com" required /></div>
-            <div class="field"><label>Phone *</label><input type="tel" id="bf-phone" placeholder="(555) 555-5555" required /></div>
-          </div>
-          <div class="form-row">
-            <div class="field"><label>Project Name</label><input type="text" id="bf-project" placeholder="Project / solicitation" /></div>
-            <div class="field"><label>Project Location</label><input type="text" id="bf-location" placeholder="City, State" /></div>
-          </div>
-          <div class="form-row">
-            <div class="field">
-              <label>Project Type</label>
-              <select id="bf-type">
-                <option value="">Select…</option>
-                <option>Federal / Military</option>
-                <option>Government / Municipal</option>
-                <option>Utility / Energy</option>
-                <option>Aviation / Transportation</option>
-                <option>Industrial / Commercial</option>
-                <option>Education</option>
-                <option>Correctional / Detention</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div class="field"><label>Bid / Due Date</label><input type="text" id="bf-biddate" placeholder="mm/dd/yyyy" /></div>
-          </div>
-          <div class="field full" style="margin-bottom:14px">
-            <label>Scope / Notes</label>
-            <textarea id="bf-notes" placeholder="Approx. linear footage, fence type, special requirements, link to plans…"></textarea>
-          </div>
-          <button type="submit" class="btn btn-gold bf-submit">
-            <svg viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
-            Submit Bid Request
-          </button>
-          <p class="bf-note">We respond to qualified bid invitations within one business day. Plans &amp; specs can be emailed to estimating@prestigefenceusa.com.</p>
-        </form>
+<!-- ============ SERVICE AREA ============ -->
+<section class="sec sec-sage area">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">08 &middot; Service Area</span>
+      <h2>Proudly serving the OKC metro.</h2>
+      <p>Based in the Oklahoma City metro and building across the surrounding communities. Outside the area? Ask about our travel options — we take on projects worth the drive.</p>
+    </div>
+    <div class="area-cities rv">
+      <span class="hq">Oklahoma City</span>
+      <span>Edmond</span><span>Yukon</span><span>Mustang</span><span>Moore</span>
+      <span>Norman</span><span>Piedmont</span><span>El Reno</span><span>Bethany</span>
+      <span>Warr Acres</span><span>The Village</span><span>Nichols Hills</span><span>Deer Creek</span>
+      <span>Choctaw</span><span>Midwest City</span><span>Del City</span><span>Tuttle</span>
+      <span>Newcastle</span><span>Blanchard</span>
+    </div>
+  </div>
+</section>
 
-        <div class="bf-success" id="bf-success">
-          <svg class="check" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#f5b800" stroke-width="3"/><path d="M20 33l8 8 16-18" fill="none" stroke="#f5b800" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <h3>Bid Request Received</h3>
-          <p>Thank you — our estimating team will follow up shortly. For plans or specs, email estimating@prestigefenceusa.com.</p>
+<!-- ============ QUOTE FORM ============ -->
+<section class="quote" id="quote">
+  <div class="wrap">
+    <div class="q-copy rv">
+      <span class="eyebrow">Free Estimate</span>
+      <h2>Let's build your fence.</h2>
+      <p>Tell us about your project and we'll follow up to schedule a free on-site estimate — no pressure, no obligation.</p>
+      <div class="q-contacts">
+        <a href="tel:+15806701829"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>580-670-1829</a>
+        <a href="mailto:estimating@prestigefenceusa.com"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5z"/></svg>estimating@prestigefenceusa.com</a>
+      </div>
+      <p class="q-note">Ask about our military discount and loyalty pricing for returning customers.</p>
+    </div>
+    <div class="qform rv">
+      <form id="quote-form" novalidate>
+        <h3>Request Your Free Estimate</h3>
+        <p class="fsub">We typically respond within one business day.</p>
+        <div class="frow">
+          <div class="field"><label>Name *</label><input type="text" id="qf-name" placeholder="Your name" required /></div>
+          <div class="field"><label>Phone *</label><input type="tel" id="qf-phone" placeholder="(555) 555-5555" required /></div>
         </div>
+        <div class="frow">
+          <div class="field"><label>Email *</label><input type="email" id="qf-email" placeholder="name@email.com" required /></div>
+          <div class="field"><label>City</label><input type="text" id="qf-city" placeholder="Oklahoma City" /></div>
+        </div>
+        <div class="frow">
+          <div class="field">
+            <label>Project Type</label>
+            <select id="qf-type">
+              <option value="">Select…</option>
+              <option>Wood &amp; Cedar Privacy Fence</option>
+              <option>Vinyl Fence</option>
+              <option>Ornamental Steel Fence</option>
+              <option>Chain Link Fence</option>
+              <option>Ranch, Ag &amp; Wire Fence</option>
+              <option>Gate / Gate Automation</option>
+              <option>Staining &amp; Finishing</option>
+              <option>Repair or Removal</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field"><label>Approx. Linear Ft</label><input type="text" id="qf-footage" placeholder="e.g. 150" /></div>
+        </div>
+        <div class="field full" style="margin-bottom:18px">
+          <label>Project Details</label>
+          <textarea id="qf-notes" placeholder="Fence height, gates needed, timeline, anything else we should know…"></textarea>
+        </div>
+        <button type="submit" class="btn q-submit" id="qf-submit">Request My Free Estimate</button>
+        <p class="q-fine">No spam, ever. We only use your info to respond to your request.</p>
+      </form>
+      <div class="q-success" id="qf-success">
+        <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#C6A15B" stroke-width="3"/><path d="M20 33l8 8 16-18" fill="none" stroke="#C6A15B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Request Received</h3>
+        <p>Thank you — our team will reach out shortly to schedule your free estimate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <span class="eyebrow">09 &middot; Questions</span>
+      <h2>Frequently asked.</h2>
+      <hr class="rule center" />
+    </div>
+    <div class="faq-list rv">
+      <div class="faq-item">
+        <button class="faq-q">How much does a new fence cost?<span class="chev">+</span></button>
+        <div class="faq-a"><p>It depends on the style, height, footage, gates, and finish options. Every project is quoted from an on-site visit so the number you get reflects your actual property — the estimate is always free.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How long does installation take?<span class="chev">+</span></button>
+        <div class="faq-a"><p>Most residential fences are completed in one to three days once materials are on site. Larger properties, automated gates, and staining add time — we'll give you a clear schedule with your quote.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you remove and haul off my old fence?<span class="chev">+</span></button>
+        <div class="faq-a"><p>Yes. We handle demolition, legal disposal of the old fence, posts, and hardware, and full site cleanup — including brush removal along the fence line if needed.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Should I stain my new cedar fence?<span class="chev">+</span></button>
+        <div class="faq-a"><p>We recommend it. Oil-based stain penetrates the wood, resists cracking and peeling, and dramatically extends the life and color of a cedar fence. We offer single-side, both-sides, and two-coat options in Natural Cedar, Redwood, and Pecan.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What does the warranty cover?<span class="chev">+</span></button>
+        <div class="faq-a"><p>Every installation includes a free two-year workmanship warranty covering defects from improper installation — we inspect and repair covered issues at no labor cost. An extended five-year option is available, and vinyl products carry manufacturer warranties as well.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you offer discounts?<span class="chev">+</span></button>
+        <div class="faq-a"><p>Yes — 5% off for active-duty service members, veterans, and their immediate families, plus loyalty and referral pricing for returning customers and their referrals.</p></div>
       </div>
     </div>
   </div>
@@ -827,41 +905,49 @@
 <!-- ============ FOOTER ============ -->
 <footer class="site-footer">
   <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <img class="brand-logo" src="images/prestige-fence-logo.svg" alt="Prestige Fence" />
-        <p>Self-performing commercial &amp; government fencing and perimeter security contractor. Bonded, insured, and prequalified for mission-critical work.</p>
+    <div class="fgrid">
+      <div class="fbrand">
+        <img src="images/prestige-fence-logo.svg" alt="Prestige Fence" />
+        <p>Premium fences, gates, and finishes for the Oklahoma City metro — built by our own crews and backed by a 2-year workmanship warranty.</p>
       </div>
-      <div class="foot-col">
-        <h4>Capabilities</h4>
-        <a href="#capabilities">High-Security Perimeter</a>
-        <a href="#capabilities">Anti-Ram Barriers</a>
-        <a href="#capabilities">Access Control &amp; Gates</a>
-        <a href="#capabilities">Chain Link &amp; Welded Wire</a>
-        <a href="#capabilities">Ornamental Steel</a>
+      <div class="fcol">
+        <h4>Explore</h4>
+        <a href="#styles">Fence Styles</a>
+        <a href="#gates">Gates &amp; Access</a>
+        <a href="#finishing">Finishing Touches</a>
+        <a href="#process">Our Process</a>
+        <a href="#warranty">Warranty</a>
       </div>
-      <div class="foot-col">
+      <div class="fcol">
         <h4>Company</h4>
-        <a href="#markets">Markets Served</a>
-        <a href="#approach">Our Approach</a>
-        <a href="#safety">Safety &amp; Compliance</a>
-        <a href="#bid">Request a Bid</a>
+        <a href="#faq">FAQ</a>
+        <a href="#quote">Free Estimate</a>
+        <span>Licensed &amp; Insured</span>
+        <span>Family Owned</span>
       </div>
-      <div class="foot-col">
-        <h4>Estimating</h4>
-        <p><a href="tel:+15806701829">580-670-1829</a></p>
-        <p><a href="mailto:estimating@prestigefenceusa.com">estimating@prestigefenceusa.com</a></p>
-        <p style="margin-top:12px;color:var(--muted-2)">Mon–Fri · 7:00a – 5:00p<br/>Bid invitations welcome 24/7</p>
+      <div class="fcol">
+        <h4>Contact</h4>
+        <a href="tel:+15806701829">580-670-1829</a>
+        <a href="mailto:estimating@prestigefenceusa.com">estimating@prestigefenceusa.com</a>
+        <span>Oklahoma City Metro, OK</span>
+        <span>Mon–Sat &middot; 8am–6pm</span>
       </div>
     </div>
-    <div class="foot-bottom">
-      <span>&copy; <span id="year"></span> Prestige Fence. All rights reserved. Licensed · Bonded · Insured.</span>
-      <span>Commercial &amp; Government Perimeter Security Contractors</span>
+    <div class="fbottom">
+      <span>&copy; <span id="year"></span> Prestige Fence. All rights reserved.</span>
+      <span>Custom Fences &amp; Gates &middot; Oklahoma City Metro</span>
     </div>
   </div>
 </footer>
 
 <script>
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Sticky header shadow
+  var hdr = document.getElementById('hdr');
+  addEventListener('scroll', function(){ hdr.classList.toggle('scrolled', scrollY > 10); }, { passive: true });
+
   // Mobile menu
   var mm = document.getElementById('mobile-menu');
   document.getElementById('menu-open').addEventListener('click', function(){ mm.classList.add('open'); });
@@ -870,36 +956,54 @@
     a.addEventListener('click', function(){ mm.classList.remove('open'); });
   });
 
-  // Year
-  document.getElementById('year').textContent = new Date().getFullYear();
+  // Reveal on scroll
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
 
-  // Bid form
-  document.getElementById('bid-request').addEventListener('submit', function(e){
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var q = item.querySelector('.faq-q');
+    var a = item.querySelector('.faq-a');
+    q.addEventListener('click', function(){
+      var open = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(o){
+        o.classList.remove('open');
+        o.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if (!open) {
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // Quote form
+  document.getElementById('quote-form').addEventListener('submit', function(e){
     e.preventDefault();
     var form = this;
-    var required = ['bf-company','bf-name','bf-email','bf-phone'];
+    var required = ['qf-name','qf-phone','qf-email'];
     var ok = true;
     required.forEach(function(id){
       var el = document.getElementById(id);
-      if (!el.value.trim()) { el.style.borderColor = '#ff5252'; ok = false; }
+      if (!el.value.trim()) { el.style.borderColor = '#C0392B'; ok = false; }
       else { el.style.borderColor = ''; }
     });
     if (!ok) return;
 
-    var btn = form.querySelector('.bf-submit');
+    var btn = document.getElementById('qf-submit');
     btn.disabled = true;
     btn.textContent = 'Sending…';
 
     var payload = {
-      company:     document.getElementById('bf-company').value.trim(),
-      name:        document.getElementById('bf-name').value.trim(),
-      email:       document.getElementById('bf-email').value.trim(),
-      phone:       document.getElementById('bf-phone').value.trim(),
-      projectName: document.getElementById('bf-project').value.trim(),
-      location:    document.getElementById('bf-location').value.trim(),
-      projectType: document.getElementById('bf-type').value.trim(),
-      bidDate:     document.getElementById('bf-biddate').value.trim(),
-      notes:       document.getElementById('bf-notes').value.trim(),
+      name:       document.getElementById('qf-name').value.trim(),
+      phone:      document.getElementById('qf-phone').value.trim(),
+      email:      document.getElementById('qf-email').value.trim(),
+      city:       document.getElementById('qf-city').value.trim(),
+      fence_type: document.getElementById('qf-type').value.trim(),
+      footage:    document.getElementById('qf-footage').value.trim(),
+      notes:      document.getElementById('qf-notes').value.trim(),
     };
 
     fetch('/api/bid', {
@@ -910,12 +1014,12 @@
     .then(function(r){ return r.ok ? r : Promise.reject(r.status); })
     .then(function(){
       form.style.display = 'none';
-      document.getElementById('bf-success').classList.add('show');
+      document.getElementById('qf-success').classList.add('show');
     })
     .catch(function(){
       btn.disabled = false;
-      btn.innerHTML = '<svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:currentColor"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg> Submit Bid Request';
-      alert('Something went wrong — please email estimating@prestigefenceusa.com directly.');
+      btn.textContent = 'Request My Free Estimate';
+      alert('Something went wrong — please call 580-670-1829 or email estimating@prestigefenceusa.com.');
     });
   });
 </script>

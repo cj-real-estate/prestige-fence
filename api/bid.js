@@ -1,4 +1,4 @@
-// Vercel serverless function — receives bid requests from prestigefenceusa.com
+// Vercel serverless function — receives estimate requests from prestigefenceusa.com
 // Forwards lead data to Zapier for email/CRM routing
 
 const ZAPIER_WEBHOOK = 'https://hooks.zapier.com/hooks/catch/28068299/42wahe7/';
@@ -13,20 +13,18 @@ module.exports = async function handler(req, res) {
 
   const b = req.body || {};
   const lead = {
-    company:      (b.company     || '').trim(),
-    name:         (b.name        || '').trim(),
-    email:        (b.email       || '').trim(),
-    phone:        (b.phone       || '').trim(),
-    project_name: (b.projectName || '').trim(),
-    location:     (b.location    || '').trim(),
-    project_type: (b.projectType || '').trim(),
-    bid_date:     (b.bidDate     || '').trim(),
-    notes:        (b.notes       || '').trim(),
+    name:         (b.name       || '').trim(),
+    phone:        (b.phone      || '').trim(),
+    email:        (b.email      || '').trim(),
+    city:         (b.city       || '').trim(),
+    fence_type:   (b.fence_type || '').trim(),
+    footage:      (b.footage    || '').trim(),
+    notes:        (b.notes      || '').trim(),
     source:       'prestigefenceusa.com',
     submitted_at: new Date().toISOString(),
   };
 
-  if (!lead.company || !lead.name || !lead.email || !lead.phone) {
+  if (!lead.name || !lead.phone || !lead.email) {
     return res.status(400).json({ error: 'Missing required fields' });
   }
 
