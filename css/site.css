@@ -89,9 +89,9 @@ header.site {
   transition: box-shadow 0.25s;
 }
 header.site.scrolled { box-shadow: 0 12px 40px rgba(10,36,30,0.35); }
-.nav { display: flex; align-items: center; justify-content: space-between; min-height: 112px; gap: 28px; padding: 10px 0; }
+.nav { display: flex; align-items: center; justify-content: space-between; min-height: 130px; gap: 28px; padding: 10px 0; }
 .brand { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
-.brand img { height: 112px; width: auto; }
+.brand img { height: 130px; width: auto; }
 .mainnav { display: flex; align-items: center; gap: 32px; }
 .mainnav a {
   color: var(--cream); text-decoration: none; font-weight: 500; font-size: 14.5px;
@@ -117,8 +117,8 @@ header.site.scrolled { box-shadow: 0 12px 40px rgba(10,36,30,0.35); }
 @media (max-width: 1120px) {
   .mainnav, .nav-cta { display: none; }
   .burger { display: block; }
-  .brand img { height: 92px; }
-  .nav { min-height: 98px; }
+  .brand img { height: 110px; }
+  .nav { min-height: 118px; }
 }
 
 /* Mobile menu */
