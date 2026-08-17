@@ -119,3 +119,80 @@ if (qf) {
     });
   });
 }
+
+// Careers: "Apply for This Role" buttons pre-select the position
+document.querySelectorAll('.js-apply').forEach(function(link){
+  link.addEventListener('click', function(){
+    var sel = document.getElementById('af-position');
+    if (!sel) return;
+    var want = link.getAttribute('data-position');
+    Array.prototype.forEach.call(sel.options, function(o){
+      if (o.text === want) sel.value = o.value || o.text;
+    });
+  });
+});
+
+// Careers: application form
+var af = document.getElementById('apply-form');
+if (af) {
+  af.addEventListener('submit', function(e){
+    e.preventDefault();
+    var form = this;
+    var required = ['af-name','af-phone','af-email','af-position'];
+    var ok = true;
+    var firstInvalid = null;
+    required.forEach(function(id){
+      var el = document.getElementById(id);
+      if (!el.value.trim()) {
+        el.style.borderColor = '#C0392B';
+        el.setAttribute('aria-invalid', 'true');
+        if (!firstInvalid) firstInvalid = el;
+        ok = false;
+      } else {
+        el.style.borderColor = '';
+        el.removeAttribute('aria-invalid');
+      }
+    });
+    var err = document.getElementById('af-error');
+    if (!ok) {
+      if (err) {
+        err.textContent = 'Please fill in the required fields: name, phone, email, and position.';
+        err.classList.add('show');
+      }
+      if (firstInvalid) firstInvalid.focus();
+      return;
+    }
+    if (err) { err.textContent = ''; err.classList.remove('show'); }
+
+    var btn = document.getElementById('af-submit');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    var val = function(id){ var el = document.getElementById(id); return el ? el.value.trim() : ''; };
+    var payload = {
+      name:       val('af-name'),
+      phone:      val('af-phone'),
+      email:      val('af-email'),
+      city:       val('af-city'),
+      position:   val('af-position'),
+      experience: val('af-experience'),
+      notes:      val('af-notes'),
+    };
+
+    fetch('/api/apply', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    })
+    .then(function(r){ return r.ok ? r : Promise.reject(r.status); })
+    .then(function(){
+      form.style.display = 'none';
+      document.getElementById('af-success').classList.add('show');
+    })
+    .catch(function(){
+      btn.disabled = false;
+      btn.textContent = 'Submit Application';
+      alert('Something went wrong — please call 580-670-1829 or email estimating@prestigefenceusa.com.');
+    });
+  });
+}
